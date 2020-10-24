@@ -13,8 +13,8 @@ public:
 	GameObject();
 	GameObject(int id, float x, float y);
 	GameObject(int id, const Vector2D<float>& position);
-	GameObject(std::string name, int id, float x, float y);
-	GameObject(std::string name, int id, const Vector2D<float>& position);
+	GameObject(const std::string& name, int id, float x, float y);
+	GameObject(const std::string& name, int id, const Vector2D<float>& position);
 
 	// Rule of Three
 	~GameObject(); // Destructor
@@ -34,6 +34,7 @@ public:
 
 	// Utility Functions
 	std::string ToString() const;
+	std::string ToFile() const;
 	
 private:
 	int m_id{};
